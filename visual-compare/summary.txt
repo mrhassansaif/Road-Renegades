@@ -1,0 +1,170 @@
+home@1440: 1 metric diffs
+  - missing metrics
+
+about@1440: 32 metric diffs
+  - scrollH: orig=4450 next=5146 (Δ696)
+  - btn.fontSize: orig=14px | next=13px
+  - btn.padding: orig=14px 38px | next=12px 24px
+  - btn.h: orig=46 next=41 (Δ-5)
+  - section[0].h: orig=213 next=405 (Δ192)
+  - section[0].padT: orig=0px | next=134px
+  - section[0].padB: orig=0px | next=80px
+  - section[1].h: orig=213 next=912 (Δ699)
+  - section[1].padT: orig=0px | next=104px
+  - section[1].padB: orig=0px | next=104px
+  - section[2].h: orig=1078 next=382 (Δ-696)
+  - section[2].padT: orig=0px | next=104px
+  - section[2].padB: orig=0px | next=104px
+  - section[3].h: orig=174 next=505 (Δ331)
+  - section[3].padT: orig=0px | next=104px
+  - section[3].padB: orig=0px | next=104px
+  - section[4].h: orig=381 next=465 (Δ84)
+  - section[4].padT: orig=0px | next=104px
+  - section[4].padB: orig=0px | next=104px
+  - section[5].h: orig=238 next=557 (Δ319)
+
+services@1440: 18 metric diffs
+  - btn.fontSize: orig=14px | next=13px
+  - btn.padding: orig=14px 38px | next=12px 24px
+  - btn.h: orig=46 next=41 (Δ-5)
+  - section[0].h: orig=213 next=380 (Δ167)
+  - section[0].padT: orig=0px | next=134px
+  - section[0].padB: orig=0px | next=80px
+  - section[1].h: orig=213 next=654 (Δ441)
+  - section[1].padT: orig=0px | next=104px
+  - section[1].padB: orig=0px | next=104px
+  - section[2].padT: orig=0px | next=104px
+  - section[2].padB: orig=0px | next=104px
+  - section[3].h: orig=238 next=627 (Δ389)
+  - section[3].padT: orig=0px | next=104px
+  - section[3].padB: orig=0px | next=104px
+  - section[4].h: orig=3073 next=170 (Δ-2903)
+  - section[4].padT: orig=0px | next=64px
+  - section[4].padB: orig=0px | next=64px
+  - section[5].h: orig=768 next=248 (Δ-520)
+
+gallery@1440: 1 metric diffs
+  - missing metrics
+
+testimonials@1440: 15 metric diffs
+  - scrollH: orig=5697 next=2651 (Δ-3046)
+  - btn.fontSize: orig=14px | next=13px
+  - btn.padding: orig=14px 38px | next=12px 24px
+  - btn.h: orig=46 next=41 (Δ-5)
+  - section[0].h: orig=1306 next=405 (Δ-901)
+  - section[0].padT: orig=0px | next=134px
+  - section[0].padB: orig=0px | next=80px
+  - section[1].h: orig=1023 next=66 (Δ-957)
+  - section[2].h: orig=142 next=807 (Δ665)
+  - section[2].padT: orig=0px | next=104px
+  - section[2].padB: orig=0px | next=104px
+  - section[3].h: orig=881 next=703 (Δ-178)
+  - section[3].padT: orig=0px | next=104px
+  - section[3].padB: orig=0px | next=104px
+  - section[4].h: orig=2375 next=273 (Δ-2102)
+
+contact@1440: 12 metric diffs
+  - scrollH: orig=2152 next=2741 (Δ589)
+  - btn.fontSize: orig=14px | next=13px
+  - btn.padding: orig=14px 38px | next=12px 24px
+  - btn.h: orig=46 next=41 (Δ-5)
+  - section[0].h: orig=679 next=405 (Δ-274)
+  - section[0].padT: orig=0px | next=134px
+  - section[0].padB: orig=0px | next=80px
+  - section[1].h: orig=147 next=910 (Δ763)
+  - section[1].padT: orig=0px | next=104px
+  - section[1].padB: orig=0px | next=104px
+  - section[2].h: orig=532 next=780 (Δ248)
+  - section[3].h: orig=480 next=248 (Δ-232)
+
+home@1280: 1 metric diffs
+  - missing metrics
+
+home@1024: 1 metric diffs
+  - missing metrics
+
+home@768: 1 metric diffs
+  - scrollH: orig=8366 next=1024 (Δ-7342)
+
+home@430: 1 metric diffs
+  - missing metrics
+
+home@390: 1 metric diffs
+  - missing metrics
+
+home@360: 32 metric diffs
+  - btn.fontSize: orig=14px | next=13px
+  - btn.padding: orig=14px 20px | next=12px 24px
+  - btn.h: orig=46 next=0 (Δ-46)
+  - container.maxWidth: orig=767px | next=1200px
+  - section[0].h: orig=189 next=592 (Δ403)
+  - section[0].padT: orig=0px | next=200px
+  - section[0].padB: orig=0px | next=200px
+  - section[1].h: orig=587 next=873 (Δ286)
+  - section[1].padT: orig=0px | next=64px
+  - section[1].padB: orig=0px | next=64px
+  - section[2].h: orig=223 next=344 (Δ121)
+  - section[2].padT: orig=0px | next=80px
+  - section[2].padB: orig=0px | next=80px
+  - section[3].h: orig=582 next=791 (Δ209)
+  - section[3].padT: orig=0px | next=64px
+  - section[3].padB: orig=0px | next=64px
+  - section[4].h: orig=2951 next=1760 (Δ-1191)
+  - section[4].padT: orig=0px | next=64px
+  - section[4].padB: orig=0px | next=64px
+  - section[5].h: orig=210 next=954 (Δ744)
+
+about@768: 1 metric diffs
+  - scrollH: orig=4292 next=1024 (Δ-3268)
+
+about@390: 1 metric diffs
+  - scrollH: orig=5445 next=844 (Δ-4601)
+
+services@768: 1 metric diffs
+  - scrollH: orig=4648 next=1024 (Δ-3624)
+
+services@390: 1 metric diffs
+  - scrollH: orig=5123 next=844 (Δ-4279)
+
+gallery@768: 1 metric diffs
+  - scrollH: orig=5054 next=1024 (Δ-4030)
+
+gallery@390: 1 metric diffs
+  - scrollH: orig=5100 next=844 (Δ-4256)
+
+testimonials@768: 1 metric diffs
+  - scrollH: orig=5726 next=1024 (Δ-4702)
+
+testimonials@390: 1 metric diffs
+  - scrollH: orig=5187 next=844 (Δ-4343)
+
+contact@768: 13 metric diffs
+  - scrollH: orig=2209 next=3322 (Δ1113)
+  - footer.h: orig=514 next=612 (Δ98)
+  - btn.fontSize: orig=12.768px | next=13px
+  - btn.padding: orig=16px 24px | next=12px 24px
+  - btn.h: orig=49 next=0 (Δ-49)
+  - container.maxWidth: orig=1024px | next=1200px
+  - section[0].h: orig=666 next=364 (Δ-302)
+  - section[0].padT: orig=0px | next=126px
+  - section[0].padB: orig=0px | next=56px
+  - section[1].h: orig=133 next=1495 (Δ1362)
+  - section[1].padT: orig=0px | next=80px
+  - section[1].padB: orig=0px | next=80px
+  - section[3].h: orig=501 next=264 (Δ-237)
+
+contact@390: 14 metric diffs
+  - scrollH: orig=2421 next=3804 (Δ1383)
+  - footer.h: orig=876 next=1016 (Δ140)
+  - btn.fontSize: orig=14px | next=13px
+  - btn.padding: orig=14px 20px | next=12px 24px
+  - btn.h: orig=46 next=0 (Δ-46)
+  - container.maxWidth: orig=767px | next=1200px
+  - section[0].h: orig=631 next=374 (Δ-257)
+  - section[0].padT: orig=0px | next=126px
+  - section[0].padB: orig=0px | next=56px
+  - section[1].h: orig=128 next=1497 (Δ1369)
+  - section[1].padT: orig=0px | next=64px
+  - section[1].padB: orig=0px | next=64px
+  - section[2].h: orig=503 next=586 (Δ83)
+  - section[3].h: orig=532 next=332 (Δ-200)
