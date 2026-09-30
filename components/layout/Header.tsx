@@ -12,14 +12,9 @@ import { navLinks, siteConfig } from "@/lib/data/site";
 import { assets } from "@/lib/assets";
 
 /**
- * Shared site header — used on every page.
- *
- * Desktop (≥922px): logo left | nav + “Let’s Talk” right
- * Tablet/mobile (≤921px): logo left | hamburger; dropdown panel
- * Home: transparent over hero until scroll (Astra transparent header)
- * Inner pages: solid dark bar
- * Sticky: fixed top (original had absolute transparent masthead; fixed keeps
- * chrome reachable while preserving the same visual states)
+ * Shared site header.
+ * Home: fully opaque content over a transparent bar + top scrim (no faded nav).
+ * Inner pages / scrolled / menu open: solid opaque bar.
  */
 export function Header() {
   const pathname = usePathname() ?? "/";
@@ -63,12 +58,12 @@ export function Header() {
           <Link
             href="/"
             className="rr-header__logo"
-            aria-label={siteConfig.name}
+            aria-label={`${siteConfig.name} home`}
             onClick={closeMenu}
           >
             <Image
               src={assets.logos.primary}
-              alt={siteConfig.name}
+              alt=""
               width={132}
               height={34}
               priority

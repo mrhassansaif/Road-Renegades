@@ -8,12 +8,14 @@ import { CtaBand } from "@/components/sections/CtaBand";
 import { SectionHeading } from "@/components/ui/SectionHeading";
 import { aboutPage, stats, team } from "@/lib/data/about";
 import { CtaButton } from "@/components/ui/Button";
+import { createPageMetadata } from "@/lib/seo";
 
-export const metadata: Metadata = {
+export const metadata: Metadata = createPageMetadata({
   title: "About Us",
   description:
     "Workshop story, philosophy, craftsmanship, and build process at Road Renegades.",
-};
+  path: "/about",
+});
 
 /**
  * About structure mirrors scrape:

@@ -3,14 +3,14 @@ import { partnerLogos } from "@/lib/data/partners";
 
 export function PartnerLogos() {
   return (
-    <section className="rr-surface rr-border-y py-[var(--rr-section-xs)] md:py-[var(--rr-section-sm)]">
+    <section
+      className="rr-surface rr-border-y py-[var(--rr-section-xs)] md:py-[var(--rr-section-sm)]"
+      aria-label="Workshop partners"
+    >
       <div className="rr-container">
         <ul className="m-0 flex list-none flex-wrap items-center justify-center gap-10 p-0 md:gap-14">
           {partnerLogos.map((logo) => (
-            <li
-              key={logo.src}
-              className="opacity-70 transition-opacity hover:opacity-100"
-            >
+            <li key={logo.src} className="rr-partner-logo">
               <Image
                 src={logo.src}
                 alt={logo.alt}

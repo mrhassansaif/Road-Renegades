@@ -37,12 +37,10 @@ export function CtaButton({
   }
 
   const buttonProps = props as ComponentProps<"button">;
+  const { type = "button", ...rest } = buttonProps;
   return (
-    <button className={classes} {...buttonProps}>
+    <button type={type} className={classes} {...rest}>
       {children}
     </button>
   );
 }
-
-/** @deprecated Prefer CtaButton — kept as alias for existing imports */
-export const Button = CtaButton;

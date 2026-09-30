@@ -3,7 +3,9 @@ export const siteConfig = {
   tagline: "Custom Bike Builder",
   description:
     "A specialist motorcycle workshop for custom builds, performance upgrades, and road-ready modifications — designed, fabricated, and finished under one roof.",
-  url: "https://roadrenegades.com",
+  /** Live GitHub Pages project URL (matches next.config basePath). */
+  url: "https://mrhassansaif.github.io/Road-Renegades",
+  basePath: "/Road-Renegades",
   contact: {
     /** Placeholder workshop details — replace with real business info before launch. */
     note: "Placeholder contact details — replace with your workshop information.",
@@ -25,6 +27,7 @@ export const siteConfig = {
     ],
   },
   social: [
+    /** Replace `#` with real profile URLs before launch — `#` is treated as unset. */
     { label: "Facebook", href: "#" },
     { label: "Twitter", href: "#" },
     { label: "Instagram", href: "#" },
@@ -44,10 +47,10 @@ export const navLinks = [
 ] as const;
 
 export const footerServices = [
-  { label: "Bike Modifying", href: "/services#bike-modifying" },
-  { label: "Maintenance", href: "/services#maintenance" },
-  { label: "Accessories", href: "/services#spare-parts" },
-  { label: "Custom Build", href: "/services#custom-build" },
+  { label: "Bike Modifying", href: "/services/#bike-modifying" },
+  { label: "Maintenance", href: "/services/#maintenance" },
+  { label: "Accessories", href: "/services/#spare-parts" },
+  { label: "Custom Build", href: "/services/#custom-build" },
 ] as const;
 
 export const footerExtraLinks = [

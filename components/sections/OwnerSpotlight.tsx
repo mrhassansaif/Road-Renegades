@@ -42,6 +42,7 @@ export function OwnerSpotlight({
             width={160}
             height={48}
             className="mt-8 h-12 w-auto brightness-0 invert"
+            aria-hidden
           />
           {showCta ? (
             <div className="mt-8">

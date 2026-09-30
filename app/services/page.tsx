@@ -10,12 +10,14 @@ import {
   serviceProcess,
   services,
 } from "@/lib/data/services";
+import { createPageMetadata } from "@/lib/seo";
 
-export const metadata: Metadata = {
+export const metadata: Metadata = createPageMetadata({
   title: "Services",
   description:
     "Motorcycle modifying, maintenance, accessories, and full custom builds from the Road Renegades workshop.",
-};
+  path: "/services",
+});
 
 export default function ServicesPage() {
   return (

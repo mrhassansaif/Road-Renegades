@@ -5,12 +5,14 @@ import { MapEmbed } from "@/components/sections/MapEmbed";
 import { CtaBand } from "@/components/sections/CtaBand";
 import { ContactForm } from "@/components/ui/ContactForm";
 import { CtaButton } from "@/components/ui/Button";
+import { createPageMetadata } from "@/lib/seo";
 
-export const metadata: Metadata = {
+export const metadata: Metadata = createPageMetadata({
   title: "Contact",
   description:
     "Contact the Road Renegades workshop — consultation requests, service questions, and build conversations.",
-};
+  path: "/contact",
+});
 
 export default function ContactPage() {
   return (

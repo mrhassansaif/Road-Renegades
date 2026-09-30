@@ -115,7 +115,7 @@
   html {
     scroll-behavior: smooth;
     font-size: 100%;
-    overflow-x: hidden;
+    overflow-x: clip;
   }
 
   body {
@@ -126,7 +126,7 @@
     font-size: var(--rr-text-body);
     line-height: var(--rr-lh-body);
     -webkit-font-smoothing: antialiased;
-    overflow-x: hidden;
+    overflow-x: clip;
     min-width: 0;
   }
 
@@ -260,9 +260,10 @@
 
 .rr-main {
   width: 100%;
-  max-width: 100vw;
+  max-width: 100%;
   min-width: 0;
   overflow-x: clip;
+  outline: none;
 }
 
 @media (max-width: 544px) {
@@ -953,7 +954,10 @@
   top: 0;
   z-index: 100;
   width: 100%;
-  max-width: 100vw;
+  max-width: 100%;
+  /* Keep logo/nav fully opaque — never apply opacity to the header itself */
+  opacity: 1;
+  isolation: isolate;
   transition:
     background-color 0.2s ease,
     border-color 0.2s ease,
@@ -965,14 +969,36 @@
   border-bottom: 1px solid transparent;
 }
 
+/* Soft scrim so transparent home nav stays readable without faded chrome */
+.rr-header.is-transparent::before {
+  content: "";
+  position: absolute;
+  inset: 0 0 auto;
+  height: calc(var(--rr-header-height) + 24px);
+  pointer-events: none;
+  z-index: -1;
+  background: linear-gradient(
+    to bottom,
+    rgba(8, 8, 8, 0.72) 0%,
+    rgba(8, 8, 8, 0.35) 55%,
+    transparent 100%
+  );
+}
+
 .rr-header.is-solid {
-  background: rgba(8, 8, 8, 0.96);
+  background: #080808;
   border-bottom-color: var(--rr-glass);
   box-shadow: none;
 }
 
+.rr-header.is-solid::before {
+  display: none;
+}
+
 .rr-header__bar {
   width: 100%;
+  position: relative;
+  z-index: 1;
 }
 
 .rr-header__inner {
@@ -1024,7 +1050,8 @@
 .rr-header__toggle:hover,
 .rr-header__toggle:focus-visible {
   color: var(--rr-accent);
-  outline: none;
+  outline: 2px solid var(--rr-accent);
+  outline-offset: 2px;
 }
 
 @media (min-width: 922px) {
@@ -1191,8 +1218,8 @@
   background: var(--rr-surface);
   border-top: 1px solid var(--rr-glass);
   width: 100%;
-  max-width: 100vw;
-  overflow-x: hidden;
+  max-width: 100%;
+  overflow-x: clip;
 }
 
 .rr-footer__primary {
@@ -1350,4 +1377,85 @@
   font-size: 13px;
   color: var(--rr-accent);
 }
+
+/* Skip link — keyboard navigation */
+.rr-skip-link {
+  position: absolute;
+  left: 16px;
+  top: 0;
+  z-index: 200;
+  transform: translateY(-120%);
+  padding: 12px 18px;
+  background: var(--rr-accent);
+  color: var(--rr-void);
+  font-family: var(--font-display), "Oswald", sans-serif;
+  font-size: 13px;
+  font-weight: 700;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  border-radius: 0;
+}
+
+.rr-skip-link:focus,
+.rr-skip-link:focus-visible {
+  transform: translateY(12px);
+  color: var(--rr-void);
+  outline: 2px solid var(--rr-white);
+  outline-offset: 2px;
+}
+
+/* Focus rings for interactive controls */
+.rr-btn:focus-visible,
+.rr-nav__link:focus-visible,
+.rr-mobile-nav__link:focus-visible,
+.rr-social__link:focus-visible,
+.rr-footer__menu a:focus-visible,
+.rr-footer__text a:focus-visible,
+.rr-input:focus-visible,
+.rr-textarea:focus-visible,
+.rr-faq__trigger:focus-visible,
+.rr-gallery-filters button:focus-visible {
+  outline: 2px solid var(--rr-accent);
+  outline-offset: 2px;
+}
+
+.rr-social__link--pending {
+  opacity: 0.55;
+  cursor: default;
+}
+
+.rr-partner-logo {
+  opacity: 0.75;
+  transition: opacity 0.2s ease;
+}
+
+.rr-partner-logo:hover {
+  opacity: 1;
+}
+
+/* Reduced motion */
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+
+  .rr-card-media img {
+    transition: none !important;
+  }
+
+  .rr-service-card:hover .rr-card-media img,
+  .rr-gallery-card:hover .rr-card-media img {
+    transform: none;
+  }
+}
+
 

@@ -32,7 +32,7 @@ export function Footer() {
               <Link href="/" className="rr-footer__logo" aria-label={siteConfig.name}>
                 <Image
                   src={assets.logos.primary}
-                  alt={siteConfig.name}
+                  alt=""
                   width={132}
                   height={34}
                 />

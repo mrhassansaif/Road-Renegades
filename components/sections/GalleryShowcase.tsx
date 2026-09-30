@@ -52,7 +52,7 @@ export function GalleryShowcase({
                 className={`rr-display border px-4 py-2 text-xs uppercase tracking-[2px] transition-colors ${
                   selected
                     ? "border-[color:var(--rr-accent)] bg-[color:var(--rr-accent)] text-[color:var(--rr-void)]"
-                    : "border-[color:var(--rr-glass)] bg-transparent text-[color:var(--rr-soft)] hover:border-[color:var(--rr-accent)] hover:text-[color:var(--rr-accent)]"
+                    : "border-[color:var(--rr-glass)] bg-transparent text-[color:var(--rr-muted)] hover:border-[color:var(--rr-accent)] hover:text-[color:var(--rr-accent)]"
                 }`}
                 onClick={() => setActive(category)}
               >

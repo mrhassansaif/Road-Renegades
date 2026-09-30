@@ -11,7 +11,7 @@ export function HomeHero() {
   const { hero } = homeContent;
 
   return (
-    <section className="rr-hero">
+    <section className="rr-hero" aria-label="Introduction">
       <Image
         src={assets.backgrounds.hero}
         alt=""
@@ -19,6 +19,7 @@ export function HomeHero() {
         priority
         className="object-cover object-center"
         sizes="100vw"
+        aria-hidden
       />
       <div className="rr-hero__overlay" aria-hidden />
 

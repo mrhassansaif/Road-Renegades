@@ -4,12 +4,14 @@ import { FeaturedTestimonial } from "@/components/sections/FeaturedTestimonial";
 import { TestimonialsGrid } from "@/components/sections/TestimonialsGrid";
 import { CtaBand } from "@/components/sections/CtaBand";
 import { featuredTestimonial, testimonials } from "@/lib/data/testimonials";
+import { createPageMetadata } from "@/lib/seo";
 
-export const metadata: Metadata = {
+export const metadata: Metadata = createPageMetadata({
   title: "Testimonials",
   description:
     "Sample rider feedback placeholders for the Road Renegades workshop site — replace with real reviews before launch.",
-};
+  path: "/testimonials",
+});
 
 export default function TestimonialsPage() {
   return (

@@ -4,12 +4,14 @@ import { FeaturedWorkBlock } from "@/components/sections/FeaturedWorkBlock";
 import { GalleryShowcase } from "@/components/sections/GalleryShowcase";
 import { CtaBand } from "@/components/sections/CtaBand";
 import { featuredWork, galleryWorks, works } from "@/lib/data/works";
+import { createPageMetadata } from "@/lib/seo";
 
-export const metadata: Metadata = {
+export const metadata: Metadata = createPageMetadata({
   title: "Gallery",
   description:
     "Motorcycle build showcase — scramblers, cafe racers, touring setups, restorations, and custom projects.",
-};
+  path: "/gallery",
+});
 
 export default function GalleryPage() {
   const showcaseItems = [...galleryWorks, ...works].filter(

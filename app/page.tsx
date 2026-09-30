@@ -14,19 +14,19 @@ import { stats, team } from "@/lib/data/about";
 import { featuredTestimonial } from "@/lib/data/testimonials";
 import { works } from "@/lib/data/works";
 import { siteConfig } from "@/lib/data/site";
+import { createPageMetadata } from "@/lib/seo";
 
 export const metadata: Metadata = {
+  ...createPageMetadata({
+    title: siteConfig.tagline,
+    description: siteConfig.description,
+    path: "/",
+  }),
   title: {
     absolute: `${siteConfig.name} | ${siteConfig.tagline}`,
   },
-  description: siteConfig.description,
 };
 
-/**
- * Homepage section order matches scraped Elementor home:
- * Hero → Story → Stats → Services → Works → Testimonial →
- * Partners → Owner → Team → CTA band
- */
 export default function HomePage() {
   return (
     <>

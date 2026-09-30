@@ -6,7 +6,6 @@ import { assets } from "@/lib/assets";
 
 /**
  * Home “What We Do” — matches original: image column + copy/list/CTA.
- * Not a 4-card grid (that pattern belongs on /services).
  */
 export function ServicesTeaser() {
   const { services: copy } = homeContent;
@@ -21,7 +20,7 @@ export function ServicesTeaser() {
         <div className="rr-card-media rr-aspect-service">
           <Image
             src={assets.backgrounds.hero}
-            alt=""
+            alt="Custom motorcycle in workshop light"
             fill
             className="object-cover"
             sizes="(max-width: 1024px) 100vw, 50vw"

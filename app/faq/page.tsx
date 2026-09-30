@@ -4,12 +4,14 @@ import { FaqItem } from "@/components/ui/FaqItem";
 import { CtaBand } from "@/components/sections/CtaBand";
 import { faqPage } from "@/lib/data/services";
 import { CtaButton } from "@/components/ui/Button";
+import { createPageMetadata } from "@/lib/seo";
 
-export const metadata: Metadata = {
+export const metadata: Metadata = createPageMetadata({
   title: "FAQ",
   description:
     "FAQ for Road Renegades — modifications, timelines, consultations, customization process, and maintenance.",
-};
+  path: "/faq",
+});
 
 export default function FaqPage() {
   return (

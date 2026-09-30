@@ -13,39 +13,46 @@ export function ContactForm() {
   }
 
   return (
-    <form onSubmit={onSubmit} className="space-y-5">
+    <form
+      onSubmit={onSubmit}
+      className="space-y-5"
+      noValidate={false}
+      aria-describedby={status === "ok" ? "contact-form-status" : undefined}
+    >
       <div>
-        <label htmlFor="name" className="rr-label">
+        <label htmlFor="contact-name" className="rr-label">
           Name
         </label>
         <input
-          id="name"
+          id="contact-name"
           name="name"
           type="text"
           required
+          autoComplete="name"
           placeholder="Full name"
           className="rr-input"
         />
       </div>
       <div>
-        <label htmlFor="email" className="rr-label">
+        <label htmlFor="contact-email" className="rr-label">
           Email
         </label>
         <input
-          id="email"
+          id="contact-email"
           name="email"
           type="email"
           required
+          autoComplete="email"
           placeholder="Email address"
           className="rr-input"
         />
       </div>
       <div>
-        <label htmlFor="message" className="rr-label">
+        <label htmlFor="contact-message" className="rr-label">
           Message
         </label>
         <textarea
-          id="message"
+          id="contact-message"
           name="message"
           required
           rows={6}
@@ -57,7 +64,11 @@ export function ContactForm() {
         Send Message
       </CtaButton>
       {status === "ok" ? (
-        <p className="text-sm text-[color:var(--rr-accent)]" role="status">
+        <p
+          id="contact-form-status"
+          className="text-sm text-[color:var(--rr-accent)]"
+          role="status"
+        >
           Message received — we&apos;ll get back to you soon.
         </p>
       ) : null}
