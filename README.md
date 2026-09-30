@@ -44,7 +44,7 @@ So I tried it.
 
 And somehow...
 
-**IT FUCKING WORKED.**
+**IT FOOKIN' WORKED.**
 
 Felt slightly ridiculous converting Next.js into static HTML/CSS/JS just to put it on GitHub Pages.
 
