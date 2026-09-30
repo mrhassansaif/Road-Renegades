@@ -8,15 +8,69 @@ Custom bike builder site for a motorcycle workshop vibe — builds, mods, galler
 
 ## Project
 
-Once upon a bored afternoon (or year), there was an older WordPress site. It got scraped with **HTTrack** into a pile of static HTML/CSS and sat on a disk like a digital fossil.
+Once upon a bored afternoon (or year), there was an older WordPress site.
 
-A few years later: “what if I turn this into Next.js?”  
-Tried it. Worked.
+I scraped the whole thing with **HTTrack** into a pile of static HTML/CSS, threw it on a disk, and then proceeded to completely forget about it.
 
-Then: “what if I deploy it… but not on Vercel?”  
-Why not Vercel? No idea. Heard somewhere you can put Next on **GitHub Pages**. Wanted to try it. Tried it. Succeeded.
+**For years.**
 
-Felt a bit like an idiot exporting Next.js to plain static files anyway — and here’s the how-to below.
+Then one day I was listening to [**“Renegades” by X Ambassadors**](https://youtu.be/8j741TUIET0) and somehow remembered:
+
+> **“OH SHIT. I HAVE THAT OLD BIKE WEBSITE REPO.”**
+
+So naturally — **very naturally, extremely naturally, concerningly naturally** — I opened it.
+
+And then, for reasons still unknown to science:
+
+> “What if I turn this into Next.js?”
+
+Because apparently leaving old projects alone is not an option.
+
+Tried it.
+
+**Worked.**
+
+Then I thought:
+
+> “Okay... what if I deploy it too? But not on Vercel?”
+
+Why not Vercel?
+
+**No fookin' idea.**
+
+I’d heard somewhere that you could deploy Next.js on **GitHub Pages**, and apparently that was enough motivation to spend my time figuring out how to turn a Next.js app back into a pile of static files.
+
+So I tried it.
+
+And somehow...
+
+**IT FUCKING WORKED.**
+
+Felt slightly ridiculous converting Next.js into static HTML/CSS/JS just to put it on GitHub Pages.
+
+Which is basically:
+
+> **“Congratulations. You reinvented the thing you started with.”**
+
+And here we are.
+
+A WordPress site.  
+Scraped with HTTrack.  
+Forgotten for years.  
+Resurrected because of a song.  
+Rebuilt in Next.js for absolutely no reason.  
+Then turned back into static files.
+
+**Was this necessary?**  
+No.
+
+**Did I learn something?**  
+Probably.
+
+**Would I do it again?**  
+...Give me another abandoned repo and find out.
+
+**Shenanigans: successful. 🏍️💀**
 
 This repo is that rebuild. The old WordPress site is **not** treated as currently active; this is the new static Next.js front-end based on that scrape.
 
@@ -127,7 +181,7 @@ CI workflow: [`.github/workflows/deploy-github-pages.yml`](.github/workflows/dep
 2. Repo **Settings → Pages → Build and deployment → Source**: **GitHub Actions**.
 3. Push to `main` (or run the **Deploy GitHub Pages** workflow manually).
 4. Wait for the Action to finish → open the Pages URL above.
-5. If images 404 but routes work, you probably lost `basePath` — keep `NEXT_PUBLIC_BASE_PATH=/Road-Renegades` on the project site build and don’t hand-edit asset prefixes in every component (paths are centralized in `lib/assets.ts` / `lib/basePath.ts`).
+5. If images 404 but routes work, you probably lost `basePath` — keep `NEXT_PUBLIC_BASE_PATH=/Road-Renegades` on the project-site build and don’t hand-edit asset prefixes in every component (paths are centralized in `lib/assets.ts` / `lib/basePath.ts`).
 
 ---
 
@@ -152,4 +206,45 @@ See `ASSET_MAP.md` if you need the scrape → `public/` mapping.
 
 - This is a **static-export** Next.js site. No server components that need a Node server, no Route Handlers, no ISR, no `next/image` optimizer — Pages only gets HTML/CSS/JS from `out/`.
 - Contact details / quotes in the UI may still be placeholders from the migration; swap them before treating it as a real shop site.
-- Bored-dev energy got us here. Static Next on GitHub Pages works. Ship it.
+- This whole thing started because I remembered an abandoned repo while listening to a song. So really, this is less of a project and more of a **chain of increasingly unnecessary decisions that somehow worked.**
+- Static Next on GitHub Pages works. **Apparently.**
+
+### The song that started this nonsense
+
+🎵 [**X Ambassadors — Renegades**](https://youtu.be/8j741TUIET0)
+
+---
+```
+
+
+### Road Renegades — timeline of questionable decisions
+
+```text
+WordPress
+   ↓
+HTTrack
+   ↓
+Static HTML/CSS
+   ↓
+Forgotten for years
+   ↓
+"Renegades" starts playing
+   ↓
+"Oh shit, I remember that repo"
+   ↓
+Next.js
+   ↓
+"Let's put it on GitHub Pages"
+   ↓
+Static Export
+   ↓
+GitHub Pages
+   ↓
+...wait
+   ↓
+I MADE A STATIC WEBSITE AGAIN
+   ↓
+🏍️💀
+```
+
+**10/10 would make unnecessary technology choices again.**
