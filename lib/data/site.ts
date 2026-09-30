@@ -1,3 +1,5 @@
+import { resolveBasePath } from "@/lib/basePath";
+
 export const siteConfig = {
   name: "Road Renegades",
   tagline: "Custom Bike Builder",
@@ -5,7 +7,8 @@ export const siteConfig = {
     "A specialist motorcycle workshop for custom builds, performance upgrades, and road-ready modifications — designed, fabricated, and finished under one roof.",
   /** Live GitHub Pages project URL (matches next.config basePath). */
   url: "https://mrhassansaif.github.io/Road-Renegades",
-  basePath: "/Road-Renegades",
+  /** Same resolution as next.config.ts / lib/assets.ts */
+  basePath: resolveBasePath(),
   contact: {
     /** Placeholder workshop details — replace with real business info before launch. */
     note: "Placeholder contact details — replace with your workshop information.",

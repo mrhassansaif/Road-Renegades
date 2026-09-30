@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { siteConfig } from "@/lib/data/site";
 import { assets } from "@/lib/assets";
+import { stripBasePath, withBasePath } from "@/lib/basePath";
 
 /** Join site origin + path without dropping the GitHub Pages basePath segment. */
 export function absoluteUrl(path = "/"): string {
@@ -12,18 +13,18 @@ export function absoluteUrl(path = "/"): string {
     : `${base}${normalized}/`;
 }
 
-/** Absolute URL for a public asset (no trailing slash). */
+/**
+ * Absolute URL for a public asset (no trailing slash).
+ * Accepts either root-relative (`/images/...`) or basePath-prefixed paths.
+ */
 export function absoluteAssetUrl(path: string): string {
   const base = siteConfig.url.replace(/\/$/, "");
-  const normalized = path.startsWith("/") ? path : `/${path}`;
-  return `${base}${normalized}`;
+  return `${base}${stripBasePath(path)}`;
 }
 
-/** Root-relative asset path including GitHub Pages basePath. */
+/** Root-relative asset path including GitHub Pages basePath (idempotent). */
 export function publicAssetPath(path: string): string {
-  const basePath = siteConfig.basePath.replace(/\/$/, "");
-  const normalized = path.startsWith("/") ? path : `/${path}`;
-  return `${basePath}${normalized}`;
+  return withBasePath(path);
 }
 
 const ogImage = {

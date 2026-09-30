@@ -47,6 +47,18 @@ jobs:
           test -f out/faq/index.html
           test -f out/.nojekyll
           test -d out/_next
+          test -f out/images/works/work-1.jpg
+          test -f out/images/works/story-work-1.jpg
+          # next/image must emit basePath-prefixed public assets for project Pages
+          grep -q 'src="/Road-Renegades/images/works/story-work-1.jpg"' out/index.html
+          grep -q 'src="/Road-Renegades/backgrounds/hero-section.jpg"' out/index.html
+          grep -q 'href="/Road-Renegades/_next/static/css/' out/index.html
+          # Ensure we did not leave root-absolute image srcs that bypass basePath
+          if grep -qE 'src="/(images|backgrounds|logos)/' out/index.html; then
+            echo "ERROR: found image src without /Road-Renegades basePath"
+            grep -oE 'src="/(images|backgrounds|logos)/[^"]+"' out/index.html | head
+            exit 1
+          fi
 
       - name: Upload Pages artifact
         uses: actions/upload-pages-artifact@v3

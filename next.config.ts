@@ -1,4 +1,5 @@
 import type { NextConfig } from "next";
+import { resolveBasePath } from "./lib/basePath";
 
 /**
  * GitHub Pages project site:
@@ -7,10 +8,7 @@ import type { NextConfig } from "next";
  * Override with NEXT_PUBLIC_BASE_PATH="" for root hosting (e.g. custom domain
  * or username.github.io user site). Leave unset to use the repo subpath.
  */
-const repoName = "Road-Renegades";
-const configured = process.env.NEXT_PUBLIC_BASE_PATH;
-const basePath =
-  configured !== undefined ? configured : `/${repoName}`;
+const basePath = resolveBasePath();
 
 const nextConfig: NextConfig = {
   output: "export",
@@ -23,7 +21,9 @@ const nextConfig: NextConfig = {
       }
     : {}),
   images: {
-    // Required for static hosting — no Next.js image optimization server
+    // Required for static hosting — no Next.js image optimization server.
+    // Note: unoptimized images do NOT auto-prefix basePath; public paths
+    // are prefixed centrally in lib/assets.ts via withBasePath().
     unoptimized: true,
   },
 };
